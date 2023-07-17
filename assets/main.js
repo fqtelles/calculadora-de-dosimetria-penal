@@ -17,42 +17,38 @@ function calcularResultado() {
       const mesesMeio = mesesInicial / denominador * numerador;
       const diasMeio = diasInicial / denominador * numerador;
         
-      anosTotal = anosInicial + anosMeio;
-      mesesTotal = mesesInicial + mesesMeio;
-      diasTotal = diasInicial + diasMeio;
+      var anosTotal = anosInicial + anosMeio;
+      var mesesTotal = mesesInicial + mesesMeio;
+      var diasTotal = diasInicial + diasMeio;
 
     } else if (operacao === "subtracao") {
       const anosMeio = anosInicial / denominador * numerador;
       const mesesMeio = mesesInicial / denominador * numerador;
       const diasMeio = diasInicial / denominador * numerador;
         
-      anosTotal = anosInicial - anosMeio;
-      mesesTotal = mesesInicial - mesesMeio;
-      diasTotal = diasInicial - diasMeio;
+      var anosTotal = anosInicial - anosMeio;
+      var mesesTotal = mesesInicial - mesesMeio;
+      var diasTotal = diasInicial - diasMeio;
       
     }
-  
+
     // Obter valores quebrados das operações
 
-    // const anosResto = anosTotal % 1;
-    // const mesesResto = mesesTotal % 1;
+    var anosResto = anosTotal % 1;
+    var mesesResto = mesesTotal % 1;
 
     // Converter anos e meses quebrados em meses e dias
 
-    // const mesesExtra =  anosResto * 12;
-    // const diasExtra = mesesResto * 30;
-  
+    var mesesExtra =  anosResto * 12;
+    var diasExtra = mesesResto * 30;
+
+    var anosFinal = Math.floor(anosTotal);
+    var mesesFinal = mesesTotal + mesesExtra;
+    var diasFinal = diasTotal + diasExtra;
+
     // Exibir o resultado detalhado
     let resultadoDetalhado = "";
-    if (anosTotal > 0) {
-      resultadoDetalhado += anosTotal + " ano(s), ";
-    }
-    if (mesesTotal > 0) {
-      resultadoDetalhado += mesesTotal + " mês(es), ";
-    }
-    if (diasTotal > 0) {
-    resultadoDetalhado += diasTotal + " dia(s)";
-    }
+    resultadoDetalhado += Math.floor(anosFinal) + " ano(s), " + Math.floor(mesesFinal) + " mês(es), " + Math.floor(diasFinal) + " dia(s)";
   
     document.getElementById("resultado").textContent = resultadoDetalhado;
   
