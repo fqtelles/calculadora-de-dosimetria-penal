@@ -47,6 +47,7 @@
           <label for="anos" class="block">Anos:</label>
           <input
             type="number"
+            value="0"
             id="anos"
             required
             class="w-20 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
@@ -56,6 +57,8 @@
           <label for="meses" class="block">Meses:</label>
           <input
             type="number"
+            value="0"
+            max-value="29"
             id="meses"
             required
             class="w-20 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
@@ -65,6 +68,7 @@
           <label for="dias" class="block">Dias:</label>
           <input
             type="number"
+            value="0"
             id="dias"
             required
             class="w-20 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
@@ -75,6 +79,7 @@
           <label for="numerador" class="block">Numerador:</label>
           <input
             type="number"
+            value="0"
             id="numerador"
             required
             class="w-20 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
@@ -84,6 +89,7 @@
           <label for="denominador" class="block">Denominador:</label>
           <input
             type="number"
+            value="0"
             id="denominador"
             required
             class="w-20 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
@@ -116,6 +122,7 @@
 
     </body>
 
-    <footer class="text-sm mt-20 text-gray-500">Versão 2.0. Necessário converter resultados maiores que 30 dias em mês e valores maiores que 12 meses em ano.</footer>
+    <!-- <footer class="text-sm mt-20 text-gray-500">Versão 2.0. Necessário converter resultados maiores que 30 dias em mês e valores maiores que 12 meses em ano.</footer> -->
+    <footer class="text-sm mt-20 text-gray-500">Versão 3.0. Necessário lidar com resultados em que é preciso incrementar meses e anos</footer>
 
 </html>
